@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Prevent content from hiding behind floating buttons */
+body::after {
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* ---------- CONTAINERS ---------- */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- PRODUCTS ---------- */
+.product {
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.product:last-child {
+  border-bottom: none;
+}
+
+.product strong {
+  font-size: 16px;
+}
+
+/* ---------- CART ---------- */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-controls button {
+  padding: 4px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0b5ed7;
+}
+
+/* ---------- LINKS ---------- */
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ---------- FLOATING BUTTON BASE ---------- */
+.go-to-cart,
+.floating-orders-btn {
+  position: fixed;
+  bottom: 24px;
+  padding: 14px 18px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.go-to-cart:hover,
+.floating-orders-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- GO TO CART ---------- */
+.go-to-cart {
+  left: 24px;
+  background: #0d6efd;
+}
+
+/* ---------- MY ORDERS ---------- */
+.floating-orders-btn {
+  right: 24px;
+  background: #198754;
+}
+
+/* ---------- MOBILE SAFETY ---------- */
+@media (max-width: 600px) {
+  .go-to-cart,
+  .floating-orders-btn {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}

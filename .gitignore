@@ -1,2 +1,18 @@
-mysql_data/
+# Python
+__pycache__/
+*.pyc
 .env
+venv/
+
+# Node
+node_modules/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MySQL
+*.sql.bak
