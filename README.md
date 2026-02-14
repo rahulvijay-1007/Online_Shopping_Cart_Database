@@ -84,3 +84,12 @@ http://<IP ADDRESS>:8000/docs
 
 ##IP ADDRESS
 Go to linux and type ip a----this will give the ip address of the system
+
+##HOW TO START
+1.When enter to the Online_Shopping_Cart_Database first run "docker restart shopping_backend"
+2.To check Backend running:----run-------"cd backend"-----"unicorn main:app --host 0.0.0.0 --port 8000"
+3.Go back to the Online-Shopping_Cart_Database and then run ----"cd frontend"----"python3 -m http.server 5000"
+4.Go to the browser.Tap on the Incognito Mode and the type the url---"http://<IP ADDRESS>:5000/index.html"
+5.##Authentication:
+    EMAIL----user@test.com
+    PASSWORD----123456
